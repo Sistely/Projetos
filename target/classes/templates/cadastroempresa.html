@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous" />
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1 align="center">Cadastro Estacionamento</h1>
+		<form action="salvarEmpresa" class="jumbotron" align="center"
+			style="margin-top: 50px;" method="post">
+			<div class="form-group">
+				<label for="nome">Nome do estacionamento</label> <input type="text"
+					class="form-control" placeholder="Nome do estacionamento" id="nome"
+					name="nome" required="required"/> <label for="cnpj">CNPJ</label> <input type="text"
+					class="form-control" placeholder="CNPJ" id="cnpj" name="cnpj"required="required" /> <label
+					for="endereco">Endereço</label> <input type="text"
+					class="form-control" placeholder="Endereço" id="endereco"
+					name="endereco" required="required"/> <label for="telefone">Telefone</label> <input
+					type="text" class="form-control" placeholder="Telefone"
+					id="telefone" name="telefone" required="required"/> <label for="qtdcarro">Quantidade
+					de vagas para Carros</label> <input type="text" class="form-control"
+					placeholder="Qtd. Carros" id="qtdcarro" name="qtdcarro" required="required"/> <label
+					for="qtdmoto">Quantidade de vagas para Motos</label> <input
+					type="text" class="form-control" placeholder="Qtd. Motos"
+					id="qtdmoto" name="qtdmoto" required="required"/>
+
+			</div>
+			<button type="submit" class="btn btn-success">Cadastrar</button>
+		</form>
+	</div>
+	<script type="text/javascript">
+    $("#telefone").mask("(00) 0000-00009");
+    $("#cnpj").mask("99.999.999/9999-99");
+    </script>
+</body>
+</html>
