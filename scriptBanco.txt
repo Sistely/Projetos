@@ -1,0 +1,27 @@
+create database estacionamento;
+
+use estacionamento;
+
+create table empresa(
+	cnpj char(18) primary key,
+    nome varchar(50),
+    endereco varchar(100),
+    telefone varchar (15),
+    qtdmoto int,
+    qtdcarro int
+);
+
+create table veiculo(
+	placa varchar(8)  primary key,
+    modelo varchar(20),
+    marca varchar(20),
+    cor varchar(20),
+    tipo varchar(10),
+	cnpj varchar(14),
+    entrada datetime,
+    saida datetime
+);
+
+ALTER TABLE veiculo ADD CONSTRAINT `fk_empresa` FOREIGN KEY ( `cnpj` ) REFERENCES `empresa` ( `cnpj` ) ;
+
+SET GLOBAL time_zone = '+3:00';
